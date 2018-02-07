@@ -1,4 +1,5 @@
 .idea/*
+guidyapp/guidyapp/__pycache__/*
 
 +# App artifacts
 +/_build
