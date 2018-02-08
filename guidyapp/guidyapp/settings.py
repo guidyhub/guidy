@@ -53,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'oauth2_provider.middleware.OAuth2TokenMiddleware',
 ]
 
 ROOT_URLCONF = 'guidyapp.urls'
@@ -106,6 +107,7 @@ REST_FRAMEWORK = {
 }
 
 AUTHENTICATION_BACKENDS = (
+    'oauth2_provider.backends.OAuth2Backend',
     'rest_framework_social_oauth2.backends.DjangoOAuth2',
     'social_core.backends.facebook.FacebookOAuth2',
     'social_core.backends.facebook.FacebookAppOAuth2',
@@ -117,10 +119,10 @@ DRFSO2_URL_NAMESPACE = ''
 
 SOCIAL_AUTH_FACEBOOK_KEY = '147786719252696'
 SOCIAL_AUTH_FACEBOOK_SECRET = 'b16c700d3aae95f4433914e530322bb5'
-SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', 'public_profile']
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
 SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
   'locale': 'en',
-  'fields': 'id, name, email, age_range'
+  'fields': 'id, name, email'
 }
 
 # Password validation

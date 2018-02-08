@@ -18,7 +18,7 @@ from django.urls import path
 from django.conf.urls import url, include
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
-from guidyapp.innerapp import fblogin
+from guidyapp.innerapp import fblogin, get_user
 # Serializers define the API representation.
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -40,4 +40,5 @@ urlpatterns = [
     url(r'^', include(router.urls)),
     url(r'^auth/', include('rest_framework_social_oauth2.urls')),
     url(r'^facebook_login', fblogin.main),
+    url(r'^get_user', get_user.main),
 ]
