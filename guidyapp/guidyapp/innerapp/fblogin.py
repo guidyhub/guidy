@@ -18,7 +18,7 @@ def get_client_ip(request):
 
 def main(request):
     response = None
-    origin = get_client_ip(request) + ':' + request.get_port()
+    origin = request.META['HTTP_REFERER']
     if request.GET.get("code", None) == None and response == None:
         return redirect(
             'https://www.facebook.com/v2.12/dialog/oauth?client_id=' +
@@ -49,5 +49,5 @@ def main(request):
 
         print(access_token)
 
-        return redirect('http://' + origin + '/?token=' + access_token)
+        return redirect(origin + '?token=' + access_token)
         #response = requests.get('https://graph.facebook.com/v2.12/oauth/access_token?client_id=147786719252696&redirect_uri=http://localhost:3000&client_secret=b16c700d3aae95f4433914e530322bb5&code='+code)
