@@ -18,13 +18,9 @@ from django.urls import path
 from django.conf.urls import url, include
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
-<<<<<<< HEAD
-from .innerapp import fblogin, get_tour, get_guide
+from .innerapp import fblogin, get_tour, get_guide, get_user
 
 
-=======
-from guidyapp.innerapp import fblogin, get_user
->>>>>>> remotes/origin/get_user
 # Serializers define the API representation.
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -46,10 +42,7 @@ urlpatterns = [
     url(r'^', include(router.urls)),
     url(r'^auth/', include('rest_framework_social_oauth2.urls')),
     url(r'^facebook_login', fblogin.main),
-<<<<<<< HEAD
     url(r'^get_tour', get_tour.main),
-    url(r'^guides', get_guide.main)
-=======
-    url(r'^get_user', get_user.main),
->>>>>>> remotes/origin/get_user
+    url(r'^guides', get_guide.main),
+    url(r'^get_user', get_user.main)
 ]

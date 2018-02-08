@@ -35,6 +35,7 @@ class Tour(models.Model):
     name = models.TextField(unique=True)  # This field type is a guess.
     location = models.TextField()  # This field type is a guess.
     time = models.TimeField(blank=True, null=True)  # This field type is a guess.
+    price = models.IntegerField(blank=True, null=True)
     photo = models.FilePathField(blank=True, null=True)
 
     # Tour members
