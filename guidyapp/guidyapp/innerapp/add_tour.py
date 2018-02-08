@@ -15,6 +15,5 @@ def main(request):
             new_tt = TouristTour.objects.create(user = user, tour = tour, date = request.GET.get("date", None))
             new_tt.save()
 
-
-    return JsonResponse({})
+    return JsonResponse({"status": "Okay"})
 
