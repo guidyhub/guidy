@@ -1,24 +1,17 @@
-from django.http import JsonResponse
 from django.conf import settings
 from django.shortcuts import redirect
 import requests
 import json
-import unicodedata
 
 glob_host = "http://localhost:8000"
 client_id = "dskNJyfJqbZTg1KPZEwpkrugaZCxxMLEohjCcUfL"
 client_secret = "q48PWcwBaJGEmSilQJ9RrqMrrWSM1dhEhvVPZckMlh0B9LIT7MIOJjipJjiFrRQvX6DZKnAhAvWDliDxi6BQbY35deXmqiyJLwxQDj7iL30mWlmZWk7GQhNPWKhM81K8"
-def get_client_ip(request):
-    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
-    if x_forwarded_for:
-        ip = x_forwarded_for.split(',')[0]
-    else:
-        ip = request.META.get('REMOTE_ADDR')
-    return ip
 
 def main(request):
     response = None
-    origin = request.META['HTTP_REFERER']
+
+    origin = request.META.get('HTTP_REFERER', 'http://localhost:3000')
+
     if request.GET.get("code", None) == None and response == None:
         return redirect(
             'https://www.facebook.com/v2.12/dialog/oauth?client_id=' +
@@ -47,7 +40,4 @@ def main(request):
         r = response.json()
         access_token = r['access_token']
 
-        print(access_token)
-
         return redirect(origin + '?token=' + access_token)
-        #response = requests.get('https://graph.facebook.com/v2.12/oauth/access_token?client_id=147786719252696&redirect_uri=http://localhost:3000&client_secret=b16c700d3aae95f4433914e530322bb5&code='+code)
