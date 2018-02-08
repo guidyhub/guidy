@@ -18,7 +18,7 @@ from django.urls import path
 from django.conf.urls import url, include
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
-from .innerapp import fblogin, get_tour, get_guide, get_user, get_my_tour
+from .innerapp import fblogin, get_tour, get_guide, get_user, get_my_tour, add_tour
 
 
 # Serializers define the API representation.
@@ -46,4 +46,5 @@ urlpatterns = [
     url(r'^guides', get_guide.main),
     url(r'^get_user', get_user.main),
     url(r'^get_my_tour', get_my_tour.main),
+    url(r'^add_tour', add_tour.main),
 ]

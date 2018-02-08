@@ -30,13 +30,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="get_user.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/guidyapp/innerapp/get_user.py">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/guidyapp/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+            <state relative-caret-position="-364">
+              <caret line="20" column="75" selection-start-line="20" selection-start-column="75" selection-end-line="20" selection-end-column="75" />
               <folding>
-                <element signature="e#0#50#0" expanded="true" />
+                <marker date="1518094107063" expanded="false" signature="632:837" ph="import ..." />
               </folding>
             </state>
           </provider>
@@ -45,7 +45,7 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/guidyapp/innerapp/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-831">
+            <state relative-caret-position="-914">
               <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
               <folding>
                 <marker date="1518092413573" expanded="false" signature="468:540" ph="import ..." />
@@ -54,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="get_my_tour.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/guidyapp/innerapp/get_my_tour.py">
+      <file leaf-file-name="add_tour.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/guidyapp/innerapp/add_tour.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+            <state relative-caret-position="296">
+              <caret line="14" column="92" selection-start-line="14" selection-start-column="92" selection-end-line="14" selection-end-column="92" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -84,11 +84,12 @@
         <option value="$PROJECT_DIR$/guidyapp/innerapp/models.py" />
         <option value="$PROJECT_DIR$/guidyapp/settings.py" />
         <option value="$PROJECT_DIR$/guidyapp/innerapp/get_my_tours.py" />
-        <option value="$PROJECT_DIR$/guidyapp/urls.py" />
         <option value="$PROJECT_DIR$/guidyapp/innerapp/get_user.py" />
         <option value="$PROJECT_DIR$/guidyapp/innerapp/fblogin.py" />
         <option value="$PROJECT_DIR$/guidyapp/innerapp/get_my_tour.py" />
         <option value="$PROJECT_DIR$/guidyapp/innerapp/admin.py" />
+        <option value="$PROJECT_DIR$/guidyapp/urls.py" />
+        <option value="$PROJECT_DIR$/guidyapp/innerapp/add_tour.py" />
       </list>
     </option>
   </component>
@@ -465,8 +466,7 @@
         <state relative-caret-position="440">
           <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
           <folding>
-            <element signature="e#632#664#0" expanded="true" />
-            <marker date="1518092869812" expanded="false" signature="632:837" ph="import ..." />
+            <marker date="1518094107063" expanded="false" signature="632:837" ph="import ..." />
           </folding>
         </state>
       </provider>
@@ -492,8 +492,7 @@
         <state relative-caret-position="440">
           <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
           <folding>
-            <element signature="e#632#664#0" expanded="true" />
-            <marker date="1518092869812" expanded="false" signature="632:837" ph="import ..." />
+            <marker date="1518094107063" expanded="false" signature="632:837" ph="import ..." />
           </folding>
         </state>
       </provider>
@@ -616,17 +615,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/guidyapp/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="27" column="52" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="52" />
-          <folding>
-            <element signature="e#632#664#0" expanded="true" />
-            <marker date="1518092869812" expanded="false" signature="632:837" ph="import ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/guidyapp/innerapp/apps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -640,7 +628,7 @@
         <state relative-caret-position="286">
           <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
           <folding>
-            <element signature="e#0#50#0" expanded="true" />
+            <element signature="e#0#50#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -653,9 +641,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/guidyapp/innerapp/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#32#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guidyapp/innerapp/get_my_tour.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guidyapp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-364">
+          <caret line="20" column="75" selection-start-line="20" selection-start-column="75" selection-end-line="20" selection-end-column="75" />
+          <folding>
+            <marker date="1518094107063" expanded="false" signature="632:837" ph="import ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/guidyapp/innerapp/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-831">
+        <state relative-caret-position="-914">
           <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
           <folding>
             <marker date="1518092413573" expanded="false" signature="468:540" ph="import ..." />
@@ -663,20 +679,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/guidyapp/innerapp/admin.py">
+    <entry file="file://$PROJECT_DIR$/guidyapp/innerapp/add_tour.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guidyapp/innerapp/get_my_tour.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        <state relative-caret-position="296">
+          <caret line="14" column="92" selection-start-line="14" selection-start-column="92" selection-end-line="14" selection-end-column="92" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
