@@ -35,7 +35,7 @@ def main(request):
         access_token = r['access_token']
 
         image = requests.get(
-            'https://graph.facebook.com/me?fields=picture&access_token=' +
+            'https://graph.facebook.com/me?fields=picture.height(251)&access_token=' +
             access_token)
         image = image.json()
         url = image["picture"]["data"]["url"]

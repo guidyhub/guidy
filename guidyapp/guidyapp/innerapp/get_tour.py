@@ -2,10 +2,13 @@ from .models import Tour, TouristTour
 from django.http import HttpResponse
 from django.core import serializers
 import json
-
+import datetime
 
 import logging
 
+def myconverter(o):
+    if isinstance(o, datetime.datetime):
+        return o.__str__()
 
 def main(request):
 
@@ -18,7 +21,7 @@ def main(request):
             t["price"] = calculate_price(t["id"])
 
     # tours_json = serializers.serialize('json', tours)
-    tours_json = json.dumps([item for item in tours])
+    tours_json = json.dumps([item for item in tours], default = myconverter)
 
     response = HttpResponse(tours_json, content_type='application/json')
 
