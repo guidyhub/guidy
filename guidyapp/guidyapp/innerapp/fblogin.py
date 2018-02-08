@@ -2,6 +2,9 @@ from django.conf import settings
 from django.shortcuts import redirect
 import requests
 import json
+from django.contrib.auth.models import User
+from oauth2_provider.models import AccessToken
+from datetime import datetime
 
 glob_host = "http://localhost:8000"
 client_id = "FpTuGeID69L5K0DxPxL7Cy0Uh4mvSMw5m30Ru49S"
@@ -31,6 +34,12 @@ def main(request):
         r = response.json()
         access_token = r['access_token']
 
+        image = requests.get(
+            'https://graph.facebook.com/me?fields=picture&access_token=' +
+            access_token)
+        image = image.json()
+        url = image["picture"]["data"]["url"]
+
         payload = json.loads('{"grant_type": "convert_token", "client_id": "' + client_id +
                          '", "client_secret": "' + client_secret +
                          '", "backend": "facebook", "token": "' + access_token + '"}')
@@ -39,5 +48,12 @@ def main(request):
 
         r = response.json()
         access_token = r['access_token']
+
+
+        token_ = AccessToken.objects.get(token = access_token, expires__gt = datetime.now())
+        user = User.objects.get(username = token_.user)
+
+        user.avatar.url = url
+        user.save()
 
         return redirect(origin + '?token=' + access_token)
