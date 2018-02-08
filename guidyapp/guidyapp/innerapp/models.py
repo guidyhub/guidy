@@ -9,6 +9,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+import os
 
 class Avatar(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -35,6 +36,8 @@ class Guide(models.Model):
         # managed = False
         db_table = 'guide'
 
+def get_image_path(instance, filename):
+    return os.path.join('imgs', str(instance.id), filename)
 
 class Tour(models.Model):
     # id = models.IntegerField(blank=True, primary_key=True)
@@ -50,7 +53,7 @@ class Tour(models.Model):
     location = models.TextField()  # This field type is a guess.
     time = models.TimeField(blank=True, null=True)  # This field type is a guess.
     price = models.IntegerField(blank=True, null=True)
-    photo = models.FilePathField(blank=True, null=True)
+    photo = models.ImageField(upload_to=get_image_path, blank=True, null=True)
 
     # Tour members
     members = models.ManyToManyField(User, through='TouristTour')
@@ -58,6 +61,7 @@ class Tour(models.Model):
     class Meta:
         # managed = False
         db_table = 'tour'
+
 
 
 # class Tourist(models.Model):

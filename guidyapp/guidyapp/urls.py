@@ -19,6 +19,8 @@ from django.conf.urls import url, include
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
 from .innerapp import fblogin, get_tour, get_guide, get_user, get_my_tour, add_tour
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 # Serializers define the API representation.
@@ -47,4 +49,4 @@ urlpatterns = [
     url(r'^get_user', get_user.main),
     url(r'^get_my_tour', get_my_tour.main),
     url(r'^add_tour', add_tour.main),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
