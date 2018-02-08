@@ -7,8 +7,8 @@ from oauth2_provider.models import AccessToken
 from datetime import datetime
 
 glob_host = "http://localhost:8000"
-client_id = "FpTuGeID69L5K0DxPxL7Cy0Uh4mvSMw5m30Ru49S"
-client_secret = "8ybsemG9mDyeH5GQv9ASx6RiVguI7VKYKYkq8erZCvZtyXrqAENzQ6Y5g1dLY6jKWmK2QGOo9gMqa45TpluRH7Cs32KqJlvaa39UTfXyBv46Z6m1c8sCdnb7PWgIgm04"
+client_id = "ETpNC9cGtXO78fFUZNSTW4rCfXRMWBPboaVg3rhC"
+client_secret = "c8r8NnOcV6SYW769K1OrcMu1M1lZC7Ld4Tt5HIgt16pZWy1C8IqJdKRLsj3hR86Y8W4AmSmZJPdFN7DqxA4oCosIn9gfi1TYWz5OZPqk2bHirkW2U1Ev3hK08Dh8EvAu"
 
 def main(request):
     response = None

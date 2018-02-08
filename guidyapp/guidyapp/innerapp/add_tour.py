@@ -12,6 +12,8 @@ def main(request):
         if token_:
             user = User.objects.get(username=token_.user)
             tour = Tour.objects.get(name=request.GET.get("tour_name", None))
+            tour.spots = tour.spots - int(request.GET.get("tickets", 1))
+            tour.save()
             new_tt = TouristTour.objects.create(user = user, tour = tour, date = request.GET.get("date", None))
             new_tt.save()
 
