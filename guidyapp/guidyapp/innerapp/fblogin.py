@@ -4,8 +4,8 @@ import requests
 import json
 
 glob_host = "http://localhost:8000"
-client_id = "dskNJyfJqbZTg1KPZEwpkrugaZCxxMLEohjCcUfL"
-client_secret = "q48PWcwBaJGEmSilQJ9RrqMrrWSM1dhEhvVPZckMlh0B9LIT7MIOJjipJjiFrRQvX6DZKnAhAvWDliDxi6BQbY35deXmqiyJLwxQDj7iL30mWlmZWk7GQhNPWKhM81K8"
+client_id = "FpTuGeID69L5K0DxPxL7Cy0Uh4mvSMw5m30Ru49S"
+client_secret = "8ybsemG9mDyeH5GQv9ASx6RiVguI7VKYKYkq8erZCvZtyXrqAENzQ6Y5g1dLY6jKWmK2QGOo9gMqa45TpluRH7Cs32KqJlvaa39UTfXyBv46Z6m1c8sCdnb7PWgIgm04"
 
 def main(request):
     response = None

@@ -50,8 +50,7 @@ coverage.xml
 docs/_build/
 
 *.pyc
-.idea/*
-guidyapp/guidyapp/__pycache__/*
+.idea/
 
 +# App artifacts
 +/_build
