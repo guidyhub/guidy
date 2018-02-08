@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ddee0735-f8ad-4b52-a357-830541460bce" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/guidy.sqlite" afterPath="$PROJECT_DIR$/guidy.sqlite" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/guidyapp/innerapp/admin.py" afterPath="$PROJECT_DIR$/guidyapp/innerapp/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/guidyapp/innerapp/fblogin.py" afterPath="$PROJECT_DIR$/guidyapp/innerapp/fblogin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/guidyapp/innerapp/get_user.py" afterPath="$PROJECT_DIR$/guidyapp/innerapp/get_user.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/guidyapp/innerapp/models.py" afterPath="$PROJECT_DIR$/guidyapp/innerapp/models.py" />
-    </list>
+    <list default="true" id="ddee0735-f8ad-4b52-a357-830541460bce" name="Default" comment="" />
     <ignored path="guidyapp.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
